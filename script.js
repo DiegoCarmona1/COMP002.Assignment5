@@ -25,7 +25,16 @@ console.log(range(1,10))
 // console.log(sum(range(1, 10))); // returns 55
 // Development of the function
 function sum(numArray) {
-
+    //Holds the sum of the function
+    var arrayTotal = 0
+    //defines the number of loops dependent on the length of the array
+   let numLoops = numArray.length
+   // Loop
+   for (var i = 0; i < numLoops; i++) {
+    //add the index to the sum
+    arrayTotal += numArray[i];
+   }
+   return arrayTotal;
 }
 // 3. Arrays have a reverse method that changes the array by inverting the order in which
 // its elements appear. For this exercise, write two functions, reverseArray and

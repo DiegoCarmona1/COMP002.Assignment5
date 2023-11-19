@@ -59,3 +59,12 @@ return newArray;
 }
 console.log(reverseArray(["A", "B", "C"]))
 
+function reverseArrayInPlace(arr) {
+    for (var i = 0; i <= (arr.length / 2); i++) {
+        let el = arr[i];
+        arr[i] = arr[arr.length - 1 - i];
+        arr[arr.length - 1 - i] = el;
+    }
+    return arr;
+}
+console.log(reverseArrayInPlace([1,2, 3, 4, 5]))

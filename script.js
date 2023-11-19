@@ -9,9 +9,9 @@ function range( start, end, increment ) {
     if (increment == undefined)
     increment = 1;
     // the equation for defining how many loops necessary to calculate the amount of values necessary for the array
-    numLoops  = Math.abs((end-start)/ increment) + 1;
+    let numLoops  = Math.abs((end-start)/ increment) + 1;
     // The equation to determine the values of the array
-    for (var i = 0; i < numloops; i++) {
+    for (var i = 0; i < numLoops; i++) {
     result.push(start);
     start+= increment;
 }

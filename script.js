@@ -3,14 +3,19 @@
 // Example output:
 // console.log(range(1, 10)); // outputs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 function range( start, end, increment ) {
+    // This will become the answer
     var result=[];
+    // Defines the increment between values within the string, if none, then increments by 1, also returns the result as an array
     if (increment == undefined)
     increment = 1;
-numLoops  = Math.abs((end-start)/ increment) + 1;
-for (var i = 0; i < numloops; i++) {
+    // the equation for defining how many loops necessary to calculate the amount of values necessary for the array
+    numLoops  = Math.abs((end-start)/ increment) + 1;
+    // The equation to determine the values of the array
+    for (var i = 0; i < numloops; i++) {
     result.push(start);
     start+= increment;
 }
+    // returns the array of values for the string provided.
 return result;
 }
 console.log(range(1,10))
